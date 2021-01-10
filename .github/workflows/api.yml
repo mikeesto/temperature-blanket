@@ -1,0 +1,23 @@
+on:
+  schedule:
+    - cron: "0 0 * * *" # Every day
+name: Store Weather Data
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        uses: actions/checkout@master
+        run: |
+          touch .env
+          echo API_KEY=${{secrets.API_KEY}} >> .env
+          npm install
+
+      - name: Fetch
+        run: npm run action
+
+      - name: Store
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

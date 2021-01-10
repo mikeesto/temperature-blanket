@@ -1,0 +1,24 @@
+{
+  "name": "temperature-blanket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "action": "node ./action.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeesto/temperature-blanket.git"
+  },
+  "keywords": [],
+  "author": "Michael Esteban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeesto/temperature-blanket/issues"
+  },
+  "homepage": "https://github.com/mikeesto/temperature-blanket#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  }
+}
