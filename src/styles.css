@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 600px;
+  height: 800px;
+  position: relative;
+  padding-top: 51px;
+}
+
+.blanket {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 600px;
+  height: 800px;
+}
+
+.temperature {
+  width: 497px;
+  margin: 0 auto;
+  height: 1.92px;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+    height: 600px;
+    padding-top: 67px;
+  }
+
+  .blanket {
+    width: 400px;
+    height: 600px;
+  }
+
+  .temperature {
+    width: 330px;
+    margin-left: 35px;
+    height: 1.282px;
+  }
+}
+
+/* Colours */
+.red {
+  background-color: #f21a1d;
+}
+
+.orange {
+  background-color: #ff822e;
+}
+
+.yellow {
+  background-color: #fcf340;
+}
+
+.green {
+  background-color: #13ca91;
+}
+
+.darkgreen {
+  background-color: #008000;
+}
+
+.blue {
+  background-color: #a0edff;
+}
+
+.darkblue {
+  background-color: #3b55ce;
+}
