@@ -7,8 +7,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Install
-        uses: actions/checkout@master
         run: |
           touch .env
           echo API_KEY=${{secrets.API_KEY}} >> .env
