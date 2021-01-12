@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "../styles.css";
 import Blanket from "../images/blanket_outline.svg";
 import temperatures from "../../data/temperatures.json";
@@ -29,8 +30,12 @@ for (let i = 0; i < 365; i++) {
 export default function Home() {
   return (
     <div className="wrapper">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Temperature Blanket</title>
+      </Helmet>
       <div className="container">
-        <img className="blanket" src={Blanket} />
+        <img className="blanket" src={Blanket} alt="blanket" />
         {Object.values(randomObject).map((temperature, index) => (
           <div
             key={index}
