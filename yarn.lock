@@ -4848,6 +4848,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
   integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
+fontsource-inconsolata@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-inconsolata/-/fontsource-inconsolata-4.0.0.tgz#6daf02c51ac02e906314985eb57f2aa3d1f46b48"
+  integrity sha512-asjHuNf9UXV4YB1eUSwrZtkzxX1OD7CI4Ri+FpuK+t4aMsJ36FA+H3CGAwNX+3t43tpNeMLbUW2KhYRvSPhbQw==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
