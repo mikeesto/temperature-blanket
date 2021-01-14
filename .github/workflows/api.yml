@@ -12,7 +12,7 @@ jobs:
         run: |
           touch .env
           echo API_KEY=${{secrets.API_KEY}} >> .env
-          npm install
+          npm install dotenv node-fetch
           rm package-lock.json
 
       - name: Fetch
