@@ -1,9 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import "fontsource-inconsolata";
 import "../styles.css";
 import Blanket from "../images/blanket_outline.svg";
 import temperatures from "../../data/temperatures.json";
-import "fontsource-inconsolata";
+import favicon from "../static/favicon.ico";
 
 function classNameGenerator(temp) {
   if (temp > 35) {
@@ -31,6 +32,11 @@ for (let i = 0; i < 365; i++) {
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Temperature Blanket</title>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <h1>Temperature Blanket</h1>
       <div className="colours">
         <div>
@@ -64,10 +70,6 @@ export default function Home() {
       </div>
       <p>Celsius... not fahrenheit!</p>
       <div className="wrapper">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Temperature Blanket</title>
-        </Helmet>
         <div className="container">
           <img className="blanket" src={Blanket} alt="blanket" />
           {Object.values(randomObject).map((temperature, index) => (
