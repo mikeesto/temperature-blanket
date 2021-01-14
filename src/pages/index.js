@@ -37,7 +37,7 @@ export default function Home() {
         <title>Temperature Blanket</title>
         <link rel="icon" href={favicon} />
       </Helmet>
-      <h1>Temperature Blanket</h1>
+      <h1>2021 Temperature Blanket (Brisbane, Australia)</h1>
       <div className="colours">
         <div>
           <span className="circle red" />
