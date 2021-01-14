@@ -24,10 +24,10 @@ function classNameGenerator(temp) {
   }
 }
 
-const randomObject = {};
-for (let i = 0; i < 365; i++) {
-  randomObject[i] = Math.random() * 36 + 15;
-}
+// const randomObject = {};
+// for (let i = 0; i < 365; i++) {
+//   randomObject[i] = Math.random() * 36 + 15;
+// }
 
 export default function Home() {
   return (
@@ -72,7 +72,7 @@ export default function Home() {
       <div className="wrapper">
         <div className="container">
           <img className="blanket" src={Blanket} alt="blanket" />
-          {Object.values(randomObject).map((temperature, index) => (
+          {Object.values(temperatures).map((temperature, index) => (
             <div
               key={index}
               className={`temperature ${classNameGenerator(temperature)}`}
