@@ -1,25 +1,25 @@
-on:
-  schedule:
-    - cron: "0 0 * * *" # Every day
-name: Store Weather Data
-jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Install
-        run: |
-          touch .env
-          echo API_KEY=${{secrets.API_KEY}} >> .env
-          npm install --legacy-peer-deps dotenv node-fetch
-          rm package-lock.json
+# on:
+#   schedule:
+#     - cron: "0 0 * * *" # Every day
+# name: Store Weather Data
+# jobs:
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Install
+#         run: |
+#           touch .env
+#           echo API_KEY=${{secrets.API_KEY}} >> .env
+#           npm install --legacy-peer-deps dotenv node-fetch
+#           rm package-lock.json
 
-      - name: Fetch
-        run: npm run action
+#       - name: Fetch
+#         run: npm run action
 
-      - name: Store
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: main
+#       - name: Store
+#         uses: mikeal/publish-to-github-action@master
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           BRANCH_NAME: main
